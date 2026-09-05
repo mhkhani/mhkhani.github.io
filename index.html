@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>محمدحسین خانی — Mohammad Hossein Khani</title>
+<meta name="description" content="Senior Data Executive &amp; Digital Strategist | Board Member, Rasmio — مدیر ارشد داده و استراتژیست دیجیتال">
+<meta property="og:title" content="Mohammad Hossein Khani">
+<meta property="og:description" content="Senior Data Executive & Digital Strategist | Board Member, Rasmio">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f172a;
+    --paper:#faf9f6;
+    --card:#ffffff;
+    --accent:#0f6f6a;
+    --accent-dark:#0b524e;
+    --accent-soft:#e3f2f1;
+    --gold:#b8863c;
+    --muted:#5b6472;
+    --border:#e7e4de;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Vazirmatn',Tahoma,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  [hidden]{display:none!important}
+  img{max-width:100%}
+
+  nav.topnav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,249,246,.88);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 6%;
+  }
+  nav .brand{font-weight:800;font-size:15px;text-decoration:none;color:var(--ink)}
+  nav .links{display:flex;gap:24px;font-size:14px;list-style:none;margin:0;padding:0}
+  nav .links a{text-decoration:none;color:var(--ink);opacity:.72;font-weight:600}
+  nav .links a:hover{opacity:1;color:var(--accent)}
+  nav .right{display:flex;align-items:center;gap:16px}
+  .lang-toggle{display:flex;gap:4px}
+  .lang-toggle button{font-size:12px;padding:6px 12px;border-radius:20px;border:1px solid var(--border);background:#fff;cursor:pointer;font-family:inherit;font-weight:700}
+  .lang-toggle button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+  @media (max-width:680px){ nav .links{display:none} }
+
+  .hero{
+    min-height:76vh;display:flex;flex-direction:column;justify-content:center;
+    padding:70px 6% 56px;color:#fff;position:relative;overflow:hidden;
+    background:
+      radial-gradient(1100px 480px at 85% -10%, rgba(15,111,106,.30), transparent),
+      radial-gradient(800px 460px at -5% 110%, rgba(184,134,60,.16), transparent),
+      var(--ink);
+  }
+  .hero .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:16px}
+  .hero h1{font-size:clamp(32px,6vw,58px);font-weight:800;margin:0 0 14px;line-height:1.18}
+  .hero .tagline{font-size:clamp(16px,2.3vw,19px);color:#cfe3e0;max-width:660px;margin:0 0 22px;font-weight:600}
+  .hero .pitch{font-size:15px;color:#9fb3b0;max-width:640px;line-height:1.95;margin-bottom:30px}
+  .hero .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{padding:12px 22px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:inherit}
+  .btn.primary{background:var(--gold);color:#1a1305}
+  .btn.ghost{border:1px solid rgba(255,255,255,.32);color:#fff;background:transparent}
+  .btn.ghost:hover{background:rgba(255,255,255,.08)}
+
+  section{padding:64px 6%;max-width:980px;margin:0 auto}
+  .eyebrow-sm{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:800;margin:0 0 8px}
+  h2.heading{font-size:27px;font-weight:800;margin:0 0 30px}
+  .about-text{font-size:15px;line-height:2;color:#2c333a;max-width:760px}
+  .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .pill{background:var(--accent-soft);color:var(--accent-dark);font-size:13px;font-weight:700;padding:8px 16px;border-radius:999px}
+
+  .timeline{position:relative;padding-inline-start:26px;border-inline-start:2px solid var(--border)}
+  .tl-item{position:relative;margin-bottom:32px}
+  .tl-item::before{content:"";position:absolute;inset-inline-start:-32px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--paper)}
+  .tl-item.current::before{background:var(--gold)}
+  .tl-item .role-row{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px;justify-content:space-between}
+  .tl-item .role{font-size:16.5px;font-weight:800}
+  .tl-item .badge-current{display:inline-block;background:var(--gold);color:#1a1305;font-size:10px;font-weight:800;padding:2px 10px;border-radius:999px;margin-inline-end:8px;vertical-align:middle}
+  .tl-item .org{color:var(--accent-dark);font-weight:600;font-size:14px;margin-top:2px}
+  .tl-item .date{font-size:12.5px;color:var(--muted);white-space:nowrap}
+  .tl-item ul{margin:10px 0 0;padding-inline-start:20px;font-size:14px;color:#333;line-height:1.9}
+
+  .earlier{margin-top:36px;padding-top:20px;border-top:1px dashed var(--border)}
+  .earlier .label{font-size:12px;color:var(--muted);font-weight:700;margin-bottom:12px}
+  .earlier-item{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13.5px;flex-wrap:wrap}
+  .earlier-item .role-org{font-weight:600}
+  .earlier-item .date{color:var(--muted);white-space:nowrap}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  @media (max-width:760px){ .two-col{grid-template-columns:1fr} }
+  .list-block h3{font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 14px}
+  .list-block ul{margin:0;padding-inline-start:18px;font-size:13.5px;line-height:1.95;color:#2c333a}
+  .list-block li{margin-bottom:10px}
+
+  table.tbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+  table.tbl th,table.tbl td{border-bottom:1px solid var(--border);padding:9px 6px;text-align:start;vertical-align:top}
+  table.tbl th{color:var(--muted);font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:8px}
+  .proj-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:transform .15s,box-shadow .15s}
+  .proj-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,23,42,.08)}
+  .proj-card h4{margin:0 0 6px;font-size:15px}
+  .proj-card p{margin:0 0 14px;font-size:13px;color:var(--muted)}
+  .proj-card a{font-size:12.5px;color:var(--accent);font-weight:700;text-decoration:none}
+  .proj-card a:hover{text-decoration:underline}
+
+  footer{background:var(--ink);color:#fff;padding:70px 6% 40px;text-align:center;margin-top:20px}
+  footer h2{font-size:28px;font-weight:800;margin:0 0 12px}
+  footer p.sub{color:#9fb3b0;margin:0 0 28px;font-size:14.5px}
+  .contact-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+  .contact-row a{color:#fff;border:1px solid rgba(255,255,255,.28);padding:10px 20px;border-radius:999px;text-decoration:none;font-size:13.5px;font-weight:600}
+  .contact-row a:hover{background:rgba(255,255,255,.08)}
+  footer .updated{font-size:11.5px;color:#6b7f7c}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="#top" class="brand" id="nav-brand">محمدحسین خانی</a>
+  <ul class="links" id="nav-links">
+    <li><a href="#about" data-fa="درباره" data-en="About">درباره</a></li>
+    <li><a href="#experience" data-fa="سوابق" data-en="Experience">سوابق</a></li>
+    <li><a href="#education" data-fa="تحصیلات" data-en="Education">تحصیلات</a></li>
+    <li><a href="#projects" data-fa="پروژه‌ها" data-en="Projects">پروژه‌ها</a></li>
+    <li><a href="#contact" data-fa="تماس" data-en="Contact">تماس</a></li>
+  </ul>
+  <div class="right">
+    <div class="lang-toggle">
+      <button id="lang-fa" class="active">فا</button>
+      <button id="lang-en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<div id="top"></div>
+
+<!-- ======================= PERSIAN ======================= -->
+<div id="block-fa" class="lang-block" dir="rtl" lang="fa">
+
+  <header class="hero">
+    <div class="eyebrow">به نام خدا</div>
+    <h1>محمدحسین خانی</h1>
+    <div class="tagline">مدیر ارشد داده و استراتژیست دیجیتال | عضو هیئت‌مدیره رسمیو</div>
+    <p class="pitch">مدیر ارشد و استراتژیست داده‌محور با حدود یک دهه تجربه در زمینه راهبری پروژه‌های کلان تحول دیجیتال، توسعه کسب‌وکار و مدیریت محصول. توانمند در تدوین و اجرای استراتژی‌های نوآورانه برای رشد بازار، افزایش درآمد و بهینه‌سازی فرایندهای سازمانی با رویکرد داده‌محور.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:mhkhani1994@gmail.com">تماس با من</a>
+      <a class="btn ghost" href="https://github.com/mhkhani" target="_blank" rel="noopener">گیت‌هاب</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="eyebrow-sm">درباره من</div>
+    <h2 class="heading">خلاصه‌ای از مسیر حرفه‌ای</h2>
+    <p class="about-text">مدیر ارشد و استراتژیست داده‌محور با حدود یک دهه تجربه در زمینه راهبری پروژه‌های کلان تحول دیجیتال، توسعه کسب‌وکار و مدیریت محصول. دارای سابقه عضویت در هیئت‌مدیره شرکت دانش‌بنیان رسمیو و راهبری تیم‌های محصول و محتوا. توانمند در تدوین و اجرای استراتژی‌های نوآورانه برای رشد بازار، افزایش درآمد و بهینه‌سازی فرایندهای سازمانی با رویکرد داده‌محور. به دنبال ایفای نقش کلیدی در یک سازمان پویا و درحال‌رشد برای خلق ارزش پایدار هستم.</p>
+    <div class="pills">
+      <span class="pill">برنامه‌ریزی و اجرای استراتژی</span>
+      <span class="pill">توسعه کسب‌وکار و تحلیل بازار</span>
+      <span class="pill">مدیریت محصول داده‌محور</span>
+      <span class="pill">رهبری و توسعه تیم</span>
+      <span class="pill">حاکمیت داده شرکتی</span>
+      <span class="pill">تحول دیجیتال</span>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="eyebrow-sm">سوابق شغلی</div>
+    <h2 class="heading">تجربه حرفه‌ای</h2>
+    <div class="timeline">
+
+      <div class="tl-item current">
+        <div class="role-row">
+          <span class="role"><span class="badge-current">فعلی</span>عضو هیئت‌مدیره | رسمیو</span>
+          <span class="date">مرداد ۱۴۰۴ – تاکنون</span>
+        </div>
+        <ul>
+          <li>راهبری استراتژیک شرکت با تمرکز بر اصلاح و ارتقای استراتژی‌های محصول و بازار، و راهبری مسیر جذب سرمایه ۱۰۰ میلیارد تومانی.</li>
+          <li>بنیان‌گذاری و رهبری تیم «کارخانه محتوا» به‌منظور افزایش آگاهی از برند و جذب مشتریان جدید.</li>
+          <li>مشارکت در تصمیم‌گیری‌های کلان هیئت‌مدیره برای رشد و توسعه پایدار شرکت.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">مشاور ارشد و مدیر پروژه | سازمان برنامه‌وبودجه کشور</span><span class="date">شهریور ۱۴۰۳ – ۱۴۰۴</span></div>
+        <ul>
+          <li>راهبری استراتژیک بهبود و مدرن‌سازی تجربه مشتری (CX) و فرایندهای ارائه خدمات با رویکرد دیجیتال.</li>
+          <li>طراحی و تدوین نقشه راه استراتژیک سازمان در حوزه داده و هوش مصنوعی (Data &amp; AI Strategy).</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">مدیر داده و دبیر کمیته حاکمیت داده | رایان همافزا</span><span class="date">مرداد ۱۴۰۳ – شهریور ۱۴۰۴</span></div>
+        <ul>
+          <li>طراحی و پیاده‌سازی استراتژی داده شرکت با هدف ایجاد جریان‌های درآمدی جدید از دارایی‌های داده.</li>
+          <li>استقرار ساختارهای حاکمیت داده برای تضمین کیفیت و امنیت داده‌های سازمانی.</li>
+          <li>مشارکت کلیدی در طراحی مدل کسب‌وکاری فروش سرویس (API-based Business Model).</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">عضو مدعو خبرگانی | کارگروه ویژه اقتصاد دیجیتال</span><span class="date">تیر ۱۴۰۳ – ۱۴۰۴</span></div>
+        <ul><li>مشارکت در تدوین استراتژی‌های کلان اقتصاد دیجیتال، با تمرکز بر مدل‌های کسب‌وکار مبتنی بر داده و نقشه راه تحول دیجیتال صنایع بزرگ.</li></ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">مدیر پروژه | سازمان اداری و استخدامی کشور</span><span class="date">تیر ۱۴۰۲ – شهریور ۱۴۰۳</span></div>
+        <ul><li>تدوین طرح و راهبری اجرای پروژه نظام ملی حکمرانی داده‌بنیان (کلینیک تحول دیجیتال دستگاه‌های اجرایی) و بازطراحی معماری ارائه خدمات دولت.</li></ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">مشاور توسعه بازار | رسمیو</span><span class="date">خرداد ۱۴۰۰ – آذر ۱۴۰۰</span></div>
+        <ul><li>کمک به توسعه محصولات جدید و توسعه بازار و تعاملات تجاری شرکت رسمیو (rasm.io).</li></ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">مدیر پروژه | پژوهشگاه ارتباطات و فناوری اطلاعات</span><span class="date">دی ۱۳۹۹ – تیر ۱۴۰۰</span></div>
+        <ul><li>طراحی مدل ارزیابی سطح انتشار داده در دستگاه‌های اجرایی بر اساس شاخص‌های کلیدی عملکرد داده‌محور (KPIs).</li></ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">طراح و دبیر کمیته داده باز و تحول دیجیتال | سازمان فناوری اطلاعات ایران</span><span class="date">اسفند ۱۳۹۸ – بهمن ۱۳۹۹</span></div>
+        <ul>
+          <li>راهبری کامل پروژه از ایده تا اجرا؛ تأسیس کمیته و راهبری اجرای مصوبات.</li>
+          <li>ارتقای کمیت و کیفیت داده‌های پورتال ملی داده (data.gov.ir) با انتشار بیش از ۲۰۰۰ دیتاست استاندارد: ارتقای ۴۶ رتبه‌ای ایران در شاخص بین‌المللی داده باز.</li>
+          <li>بازطراحی و استقرار نسخه جدید پورتال ملی داده جمهوری اسلامی ایران.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">مشاور | شورای اجرایی فناوری اطلاعات</span><span class="date">شهریور ۱۳۹۸ – دی ۱۴۰۱</span></div>
+        <ul>
+          <li>تصویب مصوبه شماره ۱ جلسه ۱۶ شورای اجرایی فناوری اطلاعات؛ سه دوره ارزیابی ۱۴۷ دستگاه اجرایی و دو دوره گزارش به رئیس‌جمهور.</li>
+          <li>ارزیابی عملکرد ۲۳ پروژه استراتژیک دولت الکترونیک؛ عضو تیم اجرایی پروژه‌های ملی حذف نسخه کاغذی درمان و پرداخت آنلاین وام‌های حمایتی کرونا.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">عضو کمیته هوشمندسازی و شهر هوشمند | شورای شهر تهران</span><span class="date">دی ۱۳۹۶ – مهر ۱۳۹۷</span></div>
+        <ul><li>طراحی و اجرای پورتال داده باز شهرداری تهران (data.tehran.ir)، پایگاه API (api.tehran.ir) و پایگاه شفافیت شهرداری (shafaf.tehran.ir).</li></ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">کارشناس مسئول | مرکز همکاری‌های تحول و پیشرفت ریاست‌جمهوری</span><span class="date">آذر ۱۳۹۶ – اسفند ۱۴۰۰</span></div>
+        <ul><li>مدیریت چرخه کامل دو محصول داده‌محور استراتژیک: پلتفرم هوش بازار «بنه» و پورتال داده باز «نماگر» که نقشه راه پلتفرم ملی داده باز کشور را تعیین کرد.</li></ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">مدیر گروه سامانه‌های هوشمند و داده | اندیشکده شفافیت برای ایران</span><span class="date">آذر ۱۳۹۶ – اسفند ۱۳۹۸</span></div>
+        <ul><li>راهبری طراحی و تجاری‌سازی سامانه‌های مبتنی بر داده رسمی، از جمله سامانه رصد قراردادهای کشور، مجلس‌نما، و نسخه اولیه رسمیو (rasm.io).</li></ul>
+      </div>
+
+    </div>
+
+    <div class="earlier">
+      <div class="label">سوابق پیشین‌تر</div>
+      <div class="earlier-item"><span class="role-org">مدیر پروژه رصد — اندیشکده تبیین تحولات ایالات متحده</span><span class="date">آبان ۱۳۹۳ – مرداد ۱۳۹۴</span></div>
+      <div class="earlier-item"><span class="role-org">مسئول تبلیغ مجازی — دفتر تبلیغات اسلامی دانشگاه امام صادق (ع)</span><span class="date">اسفند ۱۳۹۱ – بهمن ۱۳۹۲</span></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="eyebrow-sm">تحصیلات و فعالیت علمی</div>
+    <h2 class="heading">تحصیلات، پژوهش و سخنرانی</h2>
+    <div class="two-col">
+      <div class="list-block">
+        <h3>تحصیلات</h3>
+        <ul>
+          <li>دانشجوی دکتری سیاست‌گذاری عمومی — دانشگاه امام صادق (ع)؛ رساله در حال تدوین: «راهبردهای حکمرانی داده‌بنیان در جمهوری اسلامی ایران».</li>
+          <li>کارشناسی‌ارشد پیوسته سیاست‌گذاری عمومی — دانشگاه امام صادق (ع)؛ پایان‌نامه: «اصول، مبانی و چارچوب سیاست‌گذاری داده حکومتی باز در جمهوری اسلامی ایران».</li>
+        </ul>
+        <h3 style="margin-top:26px">مقالات و پژوهش‌ها</h3>
+        <ul>
+          <li>گزارش پژوهشی «مفهوم‌شناسی داده باز» — مرکز پژوهش‌های مجلس شورای اسلامی — ۱۴۰۳</li>
+          <li>«تحلیل و ارزشیابی مدل‌های اکوسیستم داده حکومتی باز» — پژوهشگاه علوم و فناوری اطلاعات ایران — ۱۳۹۷</li>
+          <li>Proposing a Policy Framework for Open Government Data — کنفرانس دانشگاه آکسفورد — ۲۰۱۷</li>
+        </ul>
+      </div>
+      <div class="list-block">
+        <h3>تدریس و سخنرانی منتخب</h3>
+        <table class="tbl">
+          <tr><th>عنوان</th><th>سال</th></tr>
+          <tr><td>پنل شفافیت و دسترسی آزاد به اطلاعات — پژوهشگاه ارتباطات</td><td>۱۴۰۱</td></tr>
+          <tr><td>پنل شاخص داده باز و کاربست آن — جایزه ملی سیاست‌گذاری</td><td>۱۴۰۲</td></tr>
+          <tr><td>تدریس «فناوری اطلاعات در علوم سیاسی» — دانشگاه امام صادق (ع)</td><td>۱۳۹۹</td></tr>
+          <tr><td>International Open Data Conference — World Bank &amp; IDRC، اسپانیا</td><td>۲۰۱۵</td></tr>
+          <tr><td>International Civic Technology Conference — My Society، تایوان</td><td>۲۰۱۶</td></tr>
+        </table>
+        <h3 style="margin-top:26px">دوره‌های بین‌المللی</h3>
+        <table class="tbl">
+          <tr><th>دوره</th><th>سال</th></tr>
+          <tr><td>Open Data Governance and Use — Delft University</td><td>۲۰۱۶</td></tr>
+          <tr><td>Data Stewardship Course — GovLab, NYU</td><td>۲۰۲۲</td></tr>
+          <tr><td>GITEX — امارات متحده عربی</td><td>۲۰۲۳</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="eyebrow-sm">پروژه‌های منتخب</div>
+    <h2 class="heading">نمونه‌کارها</h2>
+    <div class="grid">
+      <div class="proj-card"><h4>پورتال ملی داده</h4><p>پورتال ملی داده باز جمهوری اسلامی ایران</p><a href="https://data.gov.ir" target="_blank" rel="noopener">data.gov.ir ←</a></div>
+      <div class="proj-card"><h4>شفاف (سازمان فناوری اطلاعات)</h4><p>سامانه انتشار داده‌های سازمان فناوری اطلاعات ایران</p><a href="https://shafaf.ito.gov.ir" target="_blank" rel="noopener">shafaf.ito.gov.ir ←</a></div>
+      <div class="proj-card"><h4>داده باز شهرداری تهران</h4><p>پورتال داده باز شهرداری تهران</p><a href="https://data.tehran.ir" target="_blank" rel="noopener">data.tehran.ir ←</a></div>
+      <div class="proj-card"><h4>API شهرداری تهران</h4><p>پایگاه دسترسی به APIهای شهرداری تهران</p><a href="https://api.tehran.ir" target="_blank" rel="noopener">api.tehran.ir ←</a></div>
+      <div class="proj-card"><h4>شفافیت شهرداری تهران</h4><p>پایگاه انتشار داده‌های باز و شفافیت شهرداری تهران</p><a href="https://shafaf.tehran.ir" target="_blank" rel="noopener">shafaf.tehran.ir ←</a></div>
+      <div class="proj-card"><h4>رسمیو</h4><p>سامانه تحلیل داده‌های رسمی ثبت شرکت‌ها</p><a href="https://rasm.io" target="_blank" rel="noopener">rasm.io ←</a></div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ======================= ENGLISH ======================= -->
+<div id="block-en" class="lang-block" dir="ltr" lang="en" hidden>
+
+  <header class="hero">
+    <div class="eyebrow">In the Name of God</div>
+    <h1>Mohammad Hossein Khani</h1>
+    <div class="tagline">Senior Data Executive &amp; Digital Strategist | Board Member, Rasmio</div>
+    <p class="pitch">Senior data executive with close to a decade of experience leading large-scale digital transformation programs, business development, and product management. Skilled at designing and executing innovative strategies for market growth, revenue generation, and data-driven organizational optimization.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:mhkhani1994@gmail.com">Get in Touch</a>
+      <a class="btn ghost" href="https://github.com/mhkhani" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <section id="about-en">
+    <div class="eyebrow-sm">About</div>
+    <h2 class="heading">Professional Summary</h2>
+    <p class="about-text">Senior data executive and data-driven strategist with close to a decade of experience leading large-scale digital transformation programs, business development, and product management. Previously served on the board of directors of Rasmio, a knowledge-based data company, and has led product and content teams. Skilled at designing and executing innovative strategies for market growth, revenue generation, and data-driven organizational process optimization. Seeking a key role in a dynamic, growing organization to create sustainable value.</p>
+    <div class="pills">
+      <span class="pill">Strategic Planning &amp; Execution</span>
+      <span class="pill">Business Development &amp; Market Analysis</span>
+      <span class="pill">Data-Driven Product Management</span>
+      <span class="pill">Team Leadership &amp; Development</span>
+      <span class="pill">Corporate Data Governance</span>
+      <span class="pill">Digital Transformation</span>
+    </div>
+  </section>
+
+  <section id="experience-en">
+    <div class="eyebrow-sm">Experience</div>
+    <h2 class="heading">Professional Experience</h2>
+    <div class="timeline">
+
+      <div class="tl-item current">
+        <div class="role-row">
+          <span class="role"><span class="badge-current">Current</span>Board Member | Rasmio</span>
+          <span class="date">Jul 2025 – Present</span>
+        </div>
+        <ul>
+          <li>Provided strategic leadership to the company, refining product and market strategy and steering a fundraising round of 100 billion Iranian tomans.</li>
+          <li>Founded and led the "Content Factory" team to increase brand awareness and acquire new customers.</li>
+          <li>Contributed to major board-level decisions driving the company's sustainable growth.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">Senior Advisor &amp; Project Manager | Plan and Budget Organization of Iran</span><span class="date">Aug 2024 – 2025</span></div>
+        <ul>
+          <li>Led strategic efforts to modernize customer experience (CX) and digitize service-delivery processes.</li>
+          <li>Designed the organization's strategic roadmap for data and artificial intelligence (Data &amp; AI Strategy).</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">Data Manager &amp; Secretary, Data Governance Committee | Rayan Hamafza Co.</span><span class="date">Jul 2024 – Aug 2025</span></div>
+        <ul>
+          <li>Designed and implemented the company's data strategy to create new revenue streams from data assets.</li>
+          <li>Established data governance structures for organizational data quality and security.</li>
+          <li>Played a key role in designing an API-based service-sales business model.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">Invited Expert Member | Special Working Group on the Digital Economy</span><span class="date">Jun 2024 – 2025</span></div>
+        <ul><li>Contributed to shaping digital-economy strategies, focused on data-driven business models and transformation roadmaps for large industries.</li></ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">Project Manager | State Administration and Employment Organization</span><span class="date">Jun 2023 – Aug 2024</span></div>
+        <ul><li>Led a national data-driven governance program and redesigned the architecture of government service delivery.</li></ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">Market Development Consultant | Rasmio Co.</span><span class="date">May 2021 – Nov 2021</span></div>
+        <ul><li>Supported new-product development, market development, and business relationships at Rasmio (rasm.io).</li></ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">Project Manager | ICT Research Institute</span><span class="date">Dec 2020 – Jun 2021</span></div>
+        <ul><li>Designed an evaluation model for data-disclosure levels across government agencies, based on key data-driven KPIs.</li></ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">Designer &amp; Secretary, Open Data and Digital Transformation Committee | IT Organization of Iran</span><span class="date">Feb 2020 – Jan 2021</span></div>
+        <ul>
+          <li>Led the project end-to-end from concept to execution — from founding charter to formal establishment.</li>
+          <li>Published more than 2,000 standardized datasets on the National Open Data Portal, contributing to a 46-place improvement in Iran's Open Government Data Index ranking.</li>
+          <li>Led the redesign and deployment of a new version of Iran's National Open Data Portal.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">Advisor | IT Executive Council</span><span class="date">Aug 2019 – Dec 2022</span></div>
+        <ul>
+          <li>Secured approval of a key national resolution; ran three rounds of evaluation across 147 government agencies with two rounds of presidential reporting.</li>
+          <li>Evaluated 23 strategic e-government projects; part of the execution team for national initiatives like eliminating paper prescriptions and online COVID relief-loan disbursement.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">Member, Smart City Committee | Tehran City Council</span><span class="date">Dec 2017 – Sep 2018</span></div>
+        <ul><li>Contributed to Tehran Municipality's open-data portal, public API gateway, and transparency platform.</li></ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">Section Officer | Presidential Center for Transformation and Development Cooperation</span><span class="date">Nov 2017 – Feb 2022</span></div>
+        <ul><li>Managed the full lifecycle of two strategic data products: the "Baneh" market-intelligence platform and the "Namagar" open-data portal, which defined the national open-data platform roadmap.</li></ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="role-row"><span class="role">Head of Smart Systems and Data Group | Transparency for Iran Think Tank</span><span class="date">Nov 2017 – Feb 2020</span></div>
+        <ul><li>Led design and commercialization of official-data platforms, including a national contracts-monitoring system, a parliamentary-tracking platform, and the first version of Rasmio (rasm.io).</li></ul>
+      </div>
+
+    </div>
+
+    <div class="earlier">
+      <div class="label">Earlier Experience</div>
+      <div class="earlier-item"><span class="role-org">Monitoring Project Manager — Think Tank for Explaining U.S. Developments</span><span class="date">Oct 2014 – Jul 2015</span></div>
+      <div class="earlier-item"><span class="role-org">Virtual Outreach Officer — Islamic Propagation Office, Imam Sadiq University (AS)</span><span class="date">Feb 2013 – Jan 2014</span></div>
+    </div>
+  </section>
+
+  <section id="education-en">
+    <div class="eyebrow-sm">Education &amp; Research</div>
+    <h2 class="heading">Education, Publications &amp; Speaking</h2>
+    <div class="two-col">
+      <div class="list-block">
+        <h3>Education</h3>
+        <ul>
+          <li>PhD Candidate, Public Policy — Imam Sadiq University (AS); dissertation in progress: "Data-Driven Governance Strategies in the Islamic Republic of Iran."</li>
+          <li>Integrated Master's, Public Policy — Imam Sadiq University (AS); thesis: "Principles, Foundations, and Framework for Open Government Data Policy in the Islamic Republic of Iran."</li>
+        </ul>
+        <h3 style="margin-top:26px">Publications &amp; Research</h3>
+        <ul>
+          <li>Research report, "Conceptualizing Open Data" — Majlis Research Center — 2024</li>
+          <li>"Analysis and Evaluation of Open Government Data Ecosystem Models" — Iran Information Science and Technology Research Institute — 2018</li>
+          <li>Proposing a Policy Framework for Open Government Data — University of Oxford conference — 2017</li>
+        </ul>
+      </div>
+      <div class="list-block">
+        <h3>Selected Talks</h3>
+        <table class="tbl">
+          <tr><th>Title</th><th>Year</th></tr>
+          <tr><td>Panel, Transparency and Free Access to Information — ICT Research Institute</td><td>2022</td></tr>
+          <tr><td>Panel, the Open Data Index and institutional behavior — Iran National Policy Award</td><td>2023</td></tr>
+          <tr><td>Instructor, "IT in Political Science" — Imam Sadiq University</td><td>2020</td></tr>
+          <tr><td>International Open Data Conference — World Bank &amp; IDRC, Spain</td><td>2015</td></tr>
+          <tr><td>International Civic Technology Conference — My Society, Taiwan</td><td>2016</td></tr>
+        </table>
+        <h3 style="margin-top:26px">International Courses</h3>
+        <table class="tbl">
+          <tr><th>Course</th><th>Year</th></tr>
+          <tr><td>Open Data Governance and Use — Delft University</td><td>2016</td></tr>
+          <tr><td>Data Stewardship Course — GovLab, NYU</td><td>2022</td></tr>
+          <tr><td>GITEX — United Arab Emirates</td><td>2023</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects-en">
+    <div class="eyebrow-sm">Selected Projects</div>
+    <h2 class="heading">Portfolio</h2>
+    <div class="grid">
+      <div class="proj-card"><h4>National Open Data Portal</h4><p>Iran's national open government data portal</p><a href="https://data.gov.ir" target="_blank" rel="noopener">data.gov.ir ←</a></div>
+      <div class="proj-card"><h4>Shafaf (IT Organization of Iran)</h4><p>Data-publication platform for the Information Technology Organization of Iran</p><a href="https://shafaf.ito.gov.ir" target="_blank" rel="noopener">shafaf.ito.gov.ir ←</a></div>
+      <div class="proj-card"><h4>Tehran Municipality Open Data</h4><p>Tehran Municipality's open-data portal</p><a href="https://data.tehran.ir" target="_blank" rel="noopener">data.tehran.ir ←</a></div>
+      <div class="proj-card"><h4>Tehran Municipality API</h4><p>Public API gateway for Tehran Municipality</p><a href="https://api.tehran.ir" target="_blank" rel="noopener">api.tehran.ir ←</a></div>
+      <div class="proj-card"><h4>Tehran Municipality Transparency</h4><p>Open-data and transparency-publication platform</p><a href="https://shafaf.tehran.ir" target="_blank" rel="noopener">shafaf.tehran.ir ←</a></div>
+      <div class="proj-card"><h4>Rasmio</h4><p>Official-data analytics platform for company registrations</p><a href="https://rasm.io" target="_blank" rel="noopener">rasm.io ←</a></div>
+    </div>
+  </section>
+
+</div>
+
+<footer id="contact">
+  <h2 id="footer-title">بیایید صحبت کنیم</h2>
+  <p class="sub" id="footer-sub">برای همکاری، مشاوره یا فرصت‌های شغلی در تماس باشید</p>
+  <div class="contact-row">
+    <a href="mailto:mhkhani1994@gmail.com">mhkhani1994@gmail.com</a>
+    <a href="https://github.com/mhkhani" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <div class="updated" id="footer-updated">بروزرسانی: شهریور ۱۴۰۵ · Last updated: August 2026</div>
+</footer>
+
+<script>
+function setLang(lang){
+  const isFa = lang === "fa";
+  document.getElementById("block-fa").hidden = !isFa;
+  document.getElementById("block-en").hidden = isFa;
+  document.getElementById("lang-fa").classList.toggle("active", isFa);
+  document.getElementById("lang-en").classList.toggle("active", !isFa);
+  document.documentElement.setAttribute("dir", isFa ? "rtl" : "ltr");
+  document.documentElement.setAttribute("lang", isFa ? "fa" : "en");
+  document.getElementById("nav-brand").textContent = isFa ? "محمدحسین خانی" : "Mohammad Hossein Khani";
+  document.querySelectorAll("#nav-links a").forEach(a=>{
+    a.textContent = isFa ? a.dataset.fa : a.dataset.en;
+  });
+  document.getElementById("footer-title").textContent = isFa ? "بیایید صحبت کنیم" : "Let's Talk";
+  document.getElementById("footer-sub").textContent = isFa
+    ? "برای همکاری، مشاوره یا فرصت‌های شغلی در تماس باشید"
+    : "Open to collaboration, advisory work, and new opportunities";
+  try{ localStorage.setItem("cvPageLang", lang); }catch(e){}
+}
+document.getElementById("lang-fa").addEventListener("click", ()=> setLang("fa"));
+document.getElementById("lang-en").addEventListener("click", ()=> setLang("en"));
+
+(function init(){
+  let lang = "fa";
+  try{
+    const saved = localStorage.getItem("cvPageLang");
+    if(saved==="en") lang = "en";
+  }catch(e){}
+  setLang(lang);
+})();
+</script>
+
+</body>
+</html>
